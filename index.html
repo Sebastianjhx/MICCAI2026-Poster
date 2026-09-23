@@ -20,6 +20,7 @@
     --head-bg: #0020A5;
     --head-ink: #FFFFFF;
     --head-muted: #C9D0F2;
+    --page: #E9EDF7;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -27,12 +28,12 @@
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --ink: #EEF0F6; --muted: #A3AAC0; --bg: #0E1324; --rule: #252C45;
-      --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE;
+      --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE; --page: #070A14;
     }
   }
   :root[data-theme="dark"] {
     --ink: #EEF0F6; --muted: #A3AAC0; --bg: #0E1324; --rule: #252C45;
-    --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE;
+    --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE; --page: #070A14;
   }
   *, *::before, *::after { box-sizing: border-box; }
   html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
@@ -78,6 +79,29 @@
   .chev svg { width: 18px; height: 18px; display: block; }
 
   nav { padding-bottom: 32px; }
+  @media (min-width: 760px) {
+    body {
+      background: var(--page);
+      display: flex; align-items: center; justify-content: center;
+      min-height: 100vh; padding: 48px 24px;
+    }
+    .wrap {
+      width: 100%; max-width: 760px; background: var(--bg);
+      border-radius: 18px; overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 20, 90, 0.16);
+    }
+    header { padding: 60px 64px 48px; }
+    .venue { font-size: 1.05rem; margin-bottom: 26px; }
+    h1 { font-size: 2.6rem; line-height: 1.18; }
+    .author { font-size: 1.3rem; margin-top: 30px; }
+    .affil { font-size: 1.05rem; }
+    nav { padding: 16px 0 36px; }
+    a.row { grid-template-columns: 56px 1fr 22px; gap: 24px; padding: 26px 64px; }
+    .icon { width: 56px; height: 56px; border-radius: 14px; }
+    .icon svg { width: 26px; height: 26px; }
+    .label { font-size: 1.35rem; }
+    .sub { font-size: 1.02rem; }
+  }
 </style>
 </head>
 <body>
