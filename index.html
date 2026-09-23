@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hongxu Jiang, MICCAI 2026 poster</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0020A5;
+    --orange: #FA4616;
+    --ink: #121826;
+    --muted: #5A6275;
+    --bg: #FFFFFF;
+    --rule: #E1E4EC;
+    --row-hover: #F2F4FA;
+    --head-bg: #0020A5;
+    --head-ink: #FFFFFF;
+    --head-muted: #C9D0F2;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EEF0F6; --muted: #A3AAC0; --bg: #0E1324; --rule: #252C45;
+      --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #EEF0F6; --muted: #A3AAC0; --bg: #0E1324; --rule: #252C45;
+    --row-hover: #161D36; --head-bg: #0A1A73; --head-ink: #FFFFFF; --head-muted: #B7C0EE;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; min-height: 100%;
+    background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 520px; margin: 0 auto; }
+
+  header {
+    background: var(--head-bg); color: var(--head-ink);
+    padding: 40px 28px 32px;
+    border-bottom: 6px solid var(--orange);
+  }
+  .venue { margin: 0 0 22px; font-size: 0.9rem; color: var(--head-muted); }
+  h1 {
+    margin: 0;
+    font-family: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+    font-weight: 500; font-size: clamp(1.55rem, 6.2vw, 2rem); line-height: 1.22;
+  }
+  .author { margin: 24px 0 0; font-size: 1.05rem; font-weight: 500; }
+  .affil { margin: 4px 0 0; font-size: 0.92rem; color: var(--head-muted); }
+
+  nav { padding: 12px 0 8px; }
+  a.row {
+    display: grid; grid-template-columns: 44px 1fr 20px; align-items: center; gap: 16px;
+    padding: 20px 28px; text-decoration: none; color: inherit;
+    border-bottom: 1px solid var(--rule);
+  }
+  a.row:hover { background: var(--row-hover); }
+  a.row:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+  .icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: grid; place-items: center;
+    background: var(--navy); color: #fff;
+  }
+  .icon svg { width: 22px; height: 22px; }
+  .label { font-size: 1.1rem; font-weight: 600; }
+  .sub { font-size: 0.88rem; color: var(--muted); margin-top: 2px; overflow-wrap: anywhere; }
+  .chev { color: var(--muted); }
+  .chev svg { width: 18px; height: 18px; display: block; }
+
+  nav { padding-bottom: 32px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="venue">MICCAI 2026, Strasbourg</p>
+      <h1>Structure-Adaptive Sparse Diffusion in Voxel Space for 3D Medical Image Enhancement</h1>
+      <p class="author">Hongxu Jiang</p>
+      <p class="affil">PhD student, University of Florida</p>
+    </header>
+
+    <nav aria-label="Links">
+      <a class="row" href="poster.pdf" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        </span>
+        <span><span class="label">E-poster</span><div class="sub">View the full poster (PDF)</div></span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></span>
+      </a>
+
+      <a class="row" href="https://github.com/mirthAI/sparse-3d-diffusion" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 2 12 8 18"/><polyline points="16 6 22 12 16 18"/></svg>
+        </span>
+        <span><span class="label">Code</span><div class="sub">GitHub: mirthAI/sparse-3d-diffusion</div></span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></span>
+      </a>
+
+      <a class="row" href="https://scholar.google.com/citations?user=7MeCy_IAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><line x1="22" y1="9" x2="22" y2="15"/></svg>
+        </span>
+        <span><span class="label">Google Scholar</span><div class="sub">Publications</div></span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></span>
+      </a>
+
+      <a class="row" href="https://www.linkedin.com/in/hongxu-jiang-427581268/" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+        </span>
+        <span><span class="label">LinkedIn</span><div class="sub">Connect with me</div></span>
+        <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 5 16 12 9 19"/></svg></span>
+      </a>
+    </nav>
+
+  </div>
+</body>
+</html>
